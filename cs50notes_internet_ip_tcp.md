@@ -1,10 +1,3 @@
-<style>
-  img[alt=pic]
-  {
-    height: 250px;
-  }
-</style>
-
 #  Netwhat
 
 - [Netwhat](#netwhat)
@@ -77,8 +70,7 @@
 - Picture each of these small networks being isolated communities with only a single road in or out
 - The internet is not an 'ethereal' thing, its a set of rules/protocols which defines how each local network interconnect/communicate with each other.
 
-    ![](pics/InternetPremier.PNG | width = 250)
-    <img src="pics/InternetPremier.PNG" alt="pic">
+    <img src="pics/InternetPremier.PNG" width="500">
 
 ## **IP (Internet Protocol)**
 ### <ins>Continuation from earlier</ins>
@@ -89,11 +81,11 @@
 ### <ins>Practical/Modern implmentation</ins>
 - Modern internet would obviously consist more than 6 networks, so a more practical solution is required for each network to talk to each other (or we would end up with pieces of networks unable to talk to one another).
 
-  <img src="pics/IP1.PNG" alt="pic">
+  <img src="pics/IP1.PNG" width="500">
 
 - This is where routers come into play, where each network is connected to a limited amount of routers (of which are connected to other nearby routers), and each router has instructions on how to move information towards its destination.
 
-  <img src="pics/IP2.PNG" alt="pic">
+  <img src="pics/IP2.PNG" width="500">
 
 - This 'information' might be stored in a routing table, inside the router. I.e. if we see an IP address of 4 we go left, if we see 6, we go another way. Basically the problem of 'routing information' is decentralised to multiple routers.
 
@@ -111,7 +103,7 @@
 - IP also known as a 'connectionless protocol', i.e. not necessarily defined path between sender and receiver.
 - There may be multiple routes to our destination. So in response to traffic that may be 'clogging', packets may be re-routed around the traffic jam to follow most optimal path, based on current state of the network.
 
-  <img src="pics/IP3.PNG" alt="pic">
+  <img src="pics/IP3.PNG" width="500">
 
 - A side effect of being 'connectionless' is delivery cannot be guaranteed, since path between sender and receiver may not be consistent. What would happen if packets are dropped? (refer to TCP below)
 
@@ -136,8 +128,8 @@
 - Port number
   - How specific program/utility/service is identified on a machine - Port number
   - IP + Port number = we can uniquely identify a particular program/utility/service running on a machine
-
-  <img src="pics/TCP1.PNG" alt="pic">
+  
+    <img src="pics/TCP1.PNG" width="500">
 
 - Guaranteeing delivery of packets (which IP alone does not do)
   - TCP includes information about (i) how many packets, (ii) in what order, alongside data being transmitted through the network
@@ -153,7 +145,7 @@
   - Looks at TCP information, and looks at port num and packet order
   - Once receives all of the packets, prepare data to be organised and sends it over to the program/service, e.g. once organised, information routed to port 25 will be interpreted as an email.
 
-  <img src="pics/TCP2.PNG" alt="pic">
+    <img src="pics/TCP2.PNG" width="500">
 
 ### <ins>If packet is 'dropped'</ins>
 - Receiver computer would detect that not all packets are received
