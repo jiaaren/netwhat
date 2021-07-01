@@ -1,8 +1,23 @@
-## TCP & UDP
-### Overview
-https://www.youtube.com/watch?v=uwoD5YsGACg
-- Communication between 2 computers need to be good and reliable, to guarantee data is received correctly (intact & in-order).
-- TCP (Transmissions control protocol)
+## **Network Layers**
+
+- [**Network Layers**](#network-layers)
+  - [**Sources**](#sources)
+  - [**Overview of TCP and UDP**](#overview-of-tcp-and-udp)
+  - [**Differences between TCP and UDP**](#differences-between-tcp-and-udp)
+  - [**TCP in more detail**](#tcp-in-more-detail)
+  - [**Network layers and OCI model**](#network-layers-and-oci-model)
+
+### **Sources**
+- [TCP and UDP differences](https://www.youtube.com/watch?v=ddM9AcreVqY)
+- [How TCP and UDP works](https://www.youtube.com/watch?v=FfvUxw8DHb0)
+- [Establishing connection with TCP - 3 way handshake](https://www.youtube.com/watch?v=fQC4v07gs5k)
+- [How TCP handles errors](https://www.youtube.com/watch?v=NaEHwrRHfqk)
+- [Network layer & OSI model](https://www.youtube.com/watch?v=kCuyS7ihr_E)
+
+### **Overview of TCP and UDP**
+- <ins>Communication</ins>
+  - Communication between 2 computers need to be good and reliable, to guarantee data is received correctly (intact & in-order).
+- <ins>TCP (Transmissions control protocol)</ins>
   - Used to guarantee that all data is received in-order
   - Information sent w/o TCP may be out of order
   - Connection oriented protocol - must first acknowledge a session between the 2 computers before a connection takes place
@@ -13,7 +28,7 @@ https://www.youtube.com/watch?v=uwoD5YsGACg
   - After established - only data can be delivered
   - TCP guarantees delivery of data
     - If data packet is 'dropped', TCP will resend it
-- UDP (User Datagram Protocol)
+- <ins>UDP (User Datagram Protocol)</ins>
   - Connnectionless oriented protocol
     - Does not establish a 'session'
     - Does not guarantee data delivery
@@ -24,8 +39,7 @@ https://www.youtube.com/watch?v=uwoD5YsGACg
     - less overhead to guarantee data delivery and establishing a session
     - will be faster than TCP
 
-https://www.youtube.com/watch?v=FfvUxw8DHb0
-
+### **Differences between TCP and UDP**
 | TCP                                                                          | UDP                                                                                                                                          |
 |------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Packets</br> - Additional Features (20 to 60 bytes per packet)                    | Lightweight (only 8 bytes)                                                                                                                   |
@@ -37,10 +51,7 @@ https://www.youtube.com/watch?v=FfvUxw8DHb0
 | Most applications                                                               | Use for real time applications</br> - voice/video streaming (no retransmission required)</br> - sending DNS (which can re-arrange the data themselves) |
 |                                                                              |                                                                                                                                              |
 
-https://www.youtube.com/watch?v=fQC4v07gs5k
-https://www.youtube.com/watch?v=NaEHwrRHfqk
-
-### TCP in more detail
+### **TCP in more detail**
 - 3 Way handshake
   - Flags in packet headers are turned off and on when transmitting between devices
   - Same as above - SYN or ACK will be turned on
@@ -66,7 +77,7 @@ https://www.youtube.com/watch?v=NaEHwrRHfqk
     - So, larger window sizes may result in larger transmission overhead
     - If connections become less stable, window size may shrink, e.g. 16kb -> 8kb
 
-### Network layers and OCI model
+### **Network layers and OCI model**
 - OCI (Open systems interconnect) model
   - This is a theoretical/conceptual model, it was never implemented
   - What we actually have is the TCP/IP model and they have their own 'Data units'
