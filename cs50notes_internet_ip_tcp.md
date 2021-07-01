@@ -77,6 +77,7 @@
 - Picture each of these small networks being isolated communities with only a single road in or out
 - The internet is not an 'ethereal' thing, its a set of rules/protocols which defines how each local network interconnect/communicate with each other.
 
+    ![](pics/InternetPremier.PNG | width = 250)
     <img src="pics/InternetPremier.PNG" alt="pic">
 
 ## **IP (Internet Protocol)**
